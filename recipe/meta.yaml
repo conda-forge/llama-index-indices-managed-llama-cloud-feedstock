@@ -1,13 +1,13 @@
 {% set name = "llama-index-indices-managed-llama-cloud" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index_indices_managed_llama_cloud-{{ version }}.tar.gz
-  sha256: 498481c6a98afce5e816bc7b7f5249fe97c1555e997e23e057dd175a543b651d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index_indices_managed_llama_cloud-{{ version }}.tar.gz
+  sha256: f09e4182cbc2a2bd75ae85cebb1681075247f0d91b931b094cac4315386ce87a
 
 build:
   noarch: python
