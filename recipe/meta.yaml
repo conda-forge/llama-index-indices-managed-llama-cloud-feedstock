@@ -1,5 +1,5 @@
 {% set name = "llama-index-indices-managed-llama-cloud" %}
-{% set version = "0.7.5" %}
+{% set version = "0.7.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index_indices_managed_llama_cloud-{{ version }}.tar.gz
-  sha256: 623316fea4d2028a51dc41a30b52fdcf4802d8c33f7ba8b8e772990a93633e5e
+  sha256: 7548f4c079cf130dd72d78b6ed43f5ab1f87248808152ea67366d8e99e9d8953
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - hatchling
     - pip
   run:
-    - llama-cloud ==0.1.25
+    - llama-cloud ==0.1.26
     - python >={{ python_min }},<4.0
     - llama-index-core >=0.12.0,<0.13
     - llamaindex-py-client >=0.1.19,<0.2.0
