@@ -26,6 +26,7 @@ requirements:
     - llama-cloud >=1.6.0,<2
     - python >=${{ python_min }},<4.0
     - llama-index-core >=0.13.0,<0.15
+    - greenlet
 tests:
   - python:
       imports:
