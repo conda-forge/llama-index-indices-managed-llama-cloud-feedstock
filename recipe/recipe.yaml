@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: llama-index-indices-managed-llama-cloud
-  version: "0.12.0"
+  version: 0.13.0
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/llama_index_indices_managed_llama_cloud-${{ version }}.tar.gz
-  sha256: d4bca39ee803209c9f6d5697c23d1e06027cb74bbe2df9a91d3854135a23c720
+  sha256: 088cf187f8e9f0e5638373029d96845a4595296a126cab5e965e230bc68d15f1
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -23,12 +23,10 @@ requirements:
     - hatchling
     - pip
   run:
-    - deprecated ==1.2.18
     - llama-cloud >=1.6.0,<2
     - python >=${{ python_min }},<4.0
     - llama-index-core >=0.13.0,<0.15
-    - llamaindex-py-client >=0.1.19,<0.2.0
-
+    - greenlet
 tests:
   - python:
       imports:
@@ -36,7 +34,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   summary: llama-index indices llama-cloud integration
